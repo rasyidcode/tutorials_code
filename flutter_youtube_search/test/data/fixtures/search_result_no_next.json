@@ -1,0 +1,79 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "z6SU9XHxStsvEK4MyolGwlcyRdQ",
+    "regionCode": "ID",
+    "pageInfo": {
+        "totalResults": 2,
+        "resultsPerPage": 2
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "cnd-XmSaJ4PkFGQ6m8yyA3CqWeU",
+            "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLZQbl9Jhl-VACm40h5t6QMDB92WlopQmV"
+            },
+            "snippet": {
+                "publishedAt": "2019-05-05T13:29:08Z",
+                "channelId": "UC0s92eMIsyR9otmIiY4v8Ww",
+                "title": "Flutter Tutorial (Flutter Fundamentals) Chapter 1 [END]",
+                "description": "Playlist ini saya sediakan untuk temen-temen semua yang ingin belajar mobile programming dengan menggunakan Flutter. Playlist ini sangat newbie-friendly ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/SoX3cel4LRM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/SoX3cel4LRM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/SoX3cel4LRM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Erico Darmawan Handoyo",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-05-05T13:29:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "X5INeg4QlckDrpJxNVyHu-JMji0",
+            "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ"
+            },
+            "snippet": {
+                "publishedAt": "2019-08-20T20:21:35Z",
+                "channelId": "UCW5YeuERMmlnqo4oq8vwUpg",
+                "title": "Flutter Tutorial for Beginners",
+                "description": "In this Flutter tutorial for Beginners series, I'll show you how to use Flutter (and Dart) to create Android and iOS apps from scratch. We'll learn all about widgets, ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/1ukSR1GRtMU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/1ukSR1GRtMU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/1ukSR1GRtMU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "The Net Ninja",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-08-20T20:21:35Z"
+            }
+        }
+    ]
+}

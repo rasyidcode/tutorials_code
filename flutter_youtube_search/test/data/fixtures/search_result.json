@@ -1,0 +1,80 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "olIwl0IJBKjTqUvODkep3VtHMmw",
+    "nextPageToken": "CAIQAA",
+    "regionCode": "ID",
+    "pageInfo": {
+        "totalResults": 1000000,
+        "resultsPerPage": 2
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "cPxFbrhdKDOW4Cf2MvqkQ2Bm2YE",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "rzTpk849ktA"
+            },
+            "snippet": {
+                "publishedAt": "2018-03-14T11:58:01Z",
+                "channelId": "UC6MTowFYbG8SK5GvTWjxSvg",
+                "title": "Tutorial Flutter #1 - Intro Pengenalan",
+                "description": "Flutter adalah sebuah Framework untuk membuat Aplikasi Android maupun iOS. Flutter ini dibuat dan dikembangkan oleh Google dengan menggunakan ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/rzTpk849ktA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/rzTpk849ktA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/rzTpk849ktA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "idr corner",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-03-14T11:58:01Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "sofGmQ8Xya0nIKsVBfMhy8bq5Qk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "7JdcGBSWo50"
+            },
+            "snippet": {
+                "publishedAt": "2021-06-22T18:56:24Z",
+                "channelId": "UCsBjURrPoezykLs9EqgamOA",
+                "title": "Build 5 Apps in 5 Minutes with Flutter… But should you?",
+                "description": "#flutter #code #dev Resources Flutter Web https://flutter.dev/web Flutter Desktop https://flutter.dev/desktop Chapters 00:00 Cross-Platform Development ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/7JdcGBSWo50/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/7JdcGBSWo50/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/7JdcGBSWo50/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Fireship",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-06-22T18:56:24Z"
+            }
+        }
+    ]
+}
