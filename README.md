@@ -7,6 +7,8 @@ Any tutorials code
 > **Type** : Youtube Video<br>
 > **Channel** : [Reso Coder](https://www.youtube.com/c/ResoCoder)<br>
 > **Tutorial Type** : Playlist
+> **Repo** : [here](https://github.com/rasyidcode/tutorials_code/tree/main/flutter_youtube_search)
 - [ ] [Mockito Samples](https://github.com/dart-lang/mockito/tree/master/example)
 > **Type** : Github Code<br>
 > **Owner** : [dart-lang](https://github.com/dart-lang)
+> **Repo** : [here](https://github.com/rasyidcode/tutorials_code/tree/main/flutter_mockito_examples)
