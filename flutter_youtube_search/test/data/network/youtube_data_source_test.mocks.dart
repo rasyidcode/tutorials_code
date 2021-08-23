@@ -25,8 +25,8 @@ class _FakeStreamedResponse extends _i1.Fake implements _i3.StreamedResponse {}
 /// A class which mocks [Client].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MySimpleMock extends _i1.Mock implements _i4.Client {
-  MySimpleMock() {
+class MockClient extends _i1.Mock implements _i4.Client {
+  MockClient() {
     _i1.throwOnMissingStub(this);
   }
 

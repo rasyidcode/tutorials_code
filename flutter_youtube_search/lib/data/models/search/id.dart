@@ -2,7 +2,6 @@ library id;
 
 import 'dart:convert';
 
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:github_user_searcch/data/models/serializers/serializers.dart';
@@ -11,7 +10,7 @@ part 'id.g.dart';
 
 abstract class Id implements Built<Id, IdBuilder> {
   // fields go here
-  String get videoId;
+  String? get videoId;
 
   Id._();
 

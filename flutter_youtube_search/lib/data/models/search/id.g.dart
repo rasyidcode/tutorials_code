@@ -17,12 +17,15 @@ class _$IdSerializer implements StructuredSerializer<Id> {
   @override
   Iterable<Object?> serialize(Serializers serializers, Id object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      'videoId',
-      serializers.serialize(object.videoId,
-          specifiedType: const FullType(String)),
-    ];
-
+    final result = <Object?>[];
+    Object? value;
+    value = object.videoId;
+    if (value != null) {
+      result
+        ..add('videoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -39,7 +42,7 @@ class _$IdSerializer implements StructuredSerializer<Id> {
       switch (key) {
         case 'videoId':
           result.videoId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -50,14 +53,12 @@ class _$IdSerializer implements StructuredSerializer<Id> {
 
 class _$Id extends Id {
   @override
-  final String videoId;
+  final String? videoId;
 
   factory _$Id([void Function(IdBuilder)? updates]) =>
       (new IdBuilder()..update(updates)).build();
 
-  _$Id._({required this.videoId}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(videoId, 'Id', 'videoId');
-  }
+  _$Id._({this.videoId}) : super._();
 
   @override
   Id rebuild(void Function(IdBuilder) updates) =>
@@ -115,10 +116,7 @@ class IdBuilder implements Builder<Id, IdBuilder> {
 
   @override
   _$Id build() {
-    final _$result = _$v ??
-        new _$Id._(
-            videoId: BuiltValueNullFieldError.checkNotNull(
-                videoId, 'Id', 'videoId'));
+    final _$result = _$v ?? new _$Id._(videoId: videoId);
     replace(_$result);
     return _$result;
   }

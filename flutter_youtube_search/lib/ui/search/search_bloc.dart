@@ -32,7 +32,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
         yield SearchState.success(searchResult);
       } on YoutubeSearchError catch (e) {
         yield SearchState.failure(e.message);
-      } on NoSuchResultException catch (e) {
+      } on NoSearchResultsException catch (e) {
         yield SearchState.failure(e.message);
       }
     }

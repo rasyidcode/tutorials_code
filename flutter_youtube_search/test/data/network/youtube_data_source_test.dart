@@ -12,16 +12,17 @@ import 'package:mockito/mockito.dart';
 
 import 'youtube_data_source_test.mocks.dart';
 
-@GenerateMocks([], customMocks: [MockSpec<http.Client>(as: #MySimpleMock)])
+// @GenerateMocks([], customMocks: [MockSpec<http.Client>(as: #MySimpleMock)])
+@GenerateMocks([http.Client])
 void main() {
   String fixture(String name) =>
       File('test/data/fixtures/$name.json').readAsStringSync();
 
-  late MySimpleMock mockClient;
+  late MockClient mockClient;
   late YoutubeDataSource dataSource;
 
   setUp(() {
-    mockClient = MySimpleMock();
+    mockClient = MockClient();
     dataSource = YoutubeDataSource(mockClient);
   });
 
@@ -80,15 +81,17 @@ void main() {
       );
 
       dataSource.searchVideos(query: 'test');
-      // dataSource.searchVideos(query: 'flutter tutorial');
-      // dataSource.searchVideos(query: 'amazing flutter', pageToken: 'abcd');
+      dataSource.searchVideos(query: 'flutter tutorial');
+      dataSource.searchVideos(query: 'amazing flutter', pageToken: 'abcd');
 
-      verify(mockClient.get(argThat(contains('test'))));
-      // verifyInOrder([
-      //   mockClient.get(argThat(contains('test')), headers: anyNamed('headers')),
-      //   mockClient.get(any, headers: anyNamed('headers')),
-      //   mockClient.get(any, headers: anyNamed('headers')),
-      // ]);
+      verifyInOrder([
+        mockClient.get(Uri.parse(
+            'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=$MAX_SEARCH_RESULT&key=$YOUTUBE_API_KEY&q=test')),
+        mockClient.get(Uri.parse(
+            'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=$MAX_SEARCH_RESULT&key=$YOUTUBE_API_KEY&q=flutter%20tutorial')),
+        mockClient.get(Uri.parse(
+            'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=$MAX_SEARCH_RESULT&key=$YOUTUBE_API_KEY&q=amazing%20flutter&pageToken=abcd')),
+      ]);
     });
   });
 }
