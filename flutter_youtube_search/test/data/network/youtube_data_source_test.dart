@@ -25,27 +25,6 @@ void main() {
     dataSource = YoutubeDataSource(mockClient);
   });
 
-  test('returns an Album if the http call completes successfully', () async {
-    final client = MySimpleMock();
-    when(client.get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1')))
-        .thenAnswer((_) async =>
-            http.Response('{"userId": 1, "id": 2, "title": "mock"}', 200));
-
-    final response = await client
-        .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
-    final data = jsonDecode(response.body);
-    expect(data, {"userId": 1, "id": 2, "title": "mock"});
-  });
-
-  test('test mockito', () async {
-    when(mockClient.get(Uri.parse('http://localhost:9999'))).thenAnswer(
-        (_) async => http.Response('{"message": "hello"}', 200, headers: {}));
-
-    final response = await mockClient.get(Uri.parse('http://localhost:9999'));
-    final data = jsonDecode(response.body);
-    expect(data, {'message': 'hello'});
-  });
-
   group('searchVideos', () {
     test('returns YoutubeSearchResult when the call completes successfully',
         () async {
