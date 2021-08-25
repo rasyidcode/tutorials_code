@@ -41,7 +41,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
   Stream<SearchState> mapNextPageState(FetchNextResultPage event) async* {
     try {
       final nextPageResult = await _youtubeSearchRepository.fetchNextVideos();
-      yield SearchState.success(state.searchResults + nextPageResult);
+      yield SearchState.success(state.searchResults! + nextPageResult);
     } on NoNextPageTokenException catch (_) {
       yield state.rebuild((b) => b.hasReachedEndOfResults = true);
     } on SearchNotInitException catch (e) {

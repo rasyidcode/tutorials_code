@@ -8,7 +8,7 @@ part 'search_state.g.dart';
 
 abstract class SearchState implements Built<SearchState, SearchStateBuilder> {
   bool get isLoading;
-  BuiltList<SearchItem> get searchResults;
+  BuiltList<SearchItem>? get searchResults;
   String get error;
   bool get hasReachedEndOfResults;
 
@@ -17,9 +17,9 @@ abstract class SearchState implements Built<SearchState, SearchStateBuilder> {
   // bool get isSuccessful =>
   //     !isLoading && searchResults != BuiltList<SearchItem>() && error == '';
 
-  bool get isInitial => !isLoading && searchResults.isEmpty && error == '';
+  bool get isInitial => !isLoading && searchResults!.isEmpty && error == '';
   bool get isSuccessful =>
-      !isLoading && searchResults.isNotEmpty && error == '';
+      !isLoading && searchResults!.isNotEmpty && error == '';
 
   SearchState._();
 
@@ -49,10 +49,10 @@ abstract class SearchState implements Built<SearchState, SearchStateBuilder> {
       ..hasReachedEndOfResults = false);
   }
 
-  factory SearchState.success(BuiltList<SearchItem> resultList) {
+  factory SearchState.success(BuiltList<SearchItem>? resultList) {
     return SearchState((b) => b
       ..isLoading = false
-      ..searchResults.replace(resultList)
+      ..searchResults.replace(resultList!)
       ..error = ''
       ..hasReachedEndOfResults = false);
   }

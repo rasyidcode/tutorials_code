@@ -10,7 +10,7 @@ class _$SearchState extends SearchState {
   @override
   final bool isLoading;
   @override
-  final BuiltList<SearchItem> searchResults;
+  final BuiltList<SearchItem>? searchResults;
   @override
   final String error;
   @override
@@ -21,14 +21,12 @@ class _$SearchState extends SearchState {
 
   _$SearchState._(
       {required this.isLoading,
-      required this.searchResults,
+      this.searchResults,
       required this.error,
       required this.hasReachedEndOfResults})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         isLoading, 'SearchState', 'isLoading');
-    BuiltValueNullFieldError.checkNotNull(
-        searchResults, 'SearchState', 'searchResults');
     BuiltValueNullFieldError.checkNotNull(error, 'SearchState', 'error');
     BuiltValueNullFieldError.checkNotNull(
         hasReachedEndOfResults, 'SearchState', 'hasReachedEndOfResults');
@@ -98,7 +96,7 @@ class SearchStateBuilder implements Builder<SearchState, SearchStateBuilder> {
     final $v = _$v;
     if ($v != null) {
       _isLoading = $v.isLoading;
-      _searchResults = $v.searchResults.toBuilder();
+      _searchResults = $v.searchResults?.toBuilder();
       _error = $v.error;
       _hasReachedEndOfResults = $v.hasReachedEndOfResults;
       _$v = null;
@@ -125,7 +123,7 @@ class SearchStateBuilder implements Builder<SearchState, SearchStateBuilder> {
           new _$SearchState._(
               isLoading: BuiltValueNullFieldError.checkNotNull(
                   isLoading, 'SearchState', 'isLoading'),
-              searchResults: searchResults.build(),
+              searchResults: _searchResults?.build(),
               error: BuiltValueNullFieldError.checkNotNull(
                   error, 'SearchState', 'error'),
               hasReachedEndOfResults: BuiltValueNullFieldError.checkNotNull(
@@ -136,7 +134,7 @@ class SearchStateBuilder implements Builder<SearchState, SearchStateBuilder> {
       late String _$failedField;
       try {
         _$failedField = 'searchResults';
-        searchResults.build();
+        _searchResults?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'SearchState', _$failedField, e.toString());
