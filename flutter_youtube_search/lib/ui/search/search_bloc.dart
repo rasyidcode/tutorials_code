@@ -11,6 +11,10 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     add(SearchInitiated((b) => b..query = query));
   }
 
+  void fetchNextResultPage() {
+    add(FetchNextResultPage());
+  }
+
   @override
   Stream<SearchState> mapEventToState(SearchEvent event) async* {
     if (event is SearchInitiated) {
