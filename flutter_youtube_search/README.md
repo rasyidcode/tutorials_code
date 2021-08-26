@@ -15,8 +15,10 @@
 - [built_value_generator](https://pub.dev/packages/built_value_generator)
 - [mockito](https://pub.dev/packages/mockito)
 
-### Important Parts
+### Summary
 
-For help getting started with Flutter, view   
+
+### Help
+For help getting started with Flutter, view
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
