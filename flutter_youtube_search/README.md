@@ -6,13 +6,11 @@
 ### Demos
 
 ### Dependiencies Used
-**normal**
 - [built_value](https://pub.dev/packages/built_value)
 - [built_collection](https://pub.dev/packages/built_collection)
 - [kiwi](https://pub.dev/packages/kiwi)
 - [http](https://pub.dev/packages/http)
 - [flutter_bloc](https://pub.dev/packages/flutter_bloc)
-**dev**
 - [build_runner](https://pub.dev/packages/build_runner)
 - [built_value_generator](https://pub.dev/packages/built_value_generator)
 - [mockito](https://pub.dev/packages/mockito)
