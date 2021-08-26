@@ -30,7 +30,8 @@ class YoutubeSearchRepository {
 
     if (nextSearchResult == null) throw NullSearchResultException();
 
-    cacheValues(query: _searchQuery, nextPageToken: _pageToken);
+    cacheValues(
+        query: _searchQuery, nextPageToken: nextSearchResult.nextPageToken);
 
     return nextSearchResult.items;
   }
