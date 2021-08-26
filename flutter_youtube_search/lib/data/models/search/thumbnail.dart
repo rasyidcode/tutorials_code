@@ -2,7 +2,6 @@ library thumbnail;
 
 import 'dart:convert';
 
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:github_user_searcch/data/models/serializers/serializers.dart';
@@ -12,8 +11,8 @@ part 'thumbnail.g.dart';
 abstract class Thumbnail implements Built<Thumbnail, ThumbnailBuilder> {
   // fields go here
   String get url;
-  int get width;
-  int get height;
+  int? get width;
+  int? get height;
   Thumbnail._();
 
   factory Thumbnail([updates(ThumbnailBuilder b)]) = _$Thumbnail;

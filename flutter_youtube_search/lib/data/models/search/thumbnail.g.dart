@@ -20,12 +20,20 @@ class _$ThumbnailSerializer implements StructuredSerializer<Thumbnail> {
     final result = <Object?>[
       'url',
       serializers.serialize(object.url, specifiedType: const FullType(String)),
-      'width',
-      serializers.serialize(object.width, specifiedType: const FullType(int)),
-      'height',
-      serializers.serialize(object.height, specifiedType: const FullType(int)),
     ];
-
+    Object? value;
+    value = object.width;
+    if (value != null) {
+      result
+        ..add('width')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.height;
+    if (value != null) {
+      result
+        ..add('height')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -46,11 +54,11 @@ class _$ThumbnailSerializer implements StructuredSerializer<Thumbnail> {
           break;
         case 'width':
           result.width = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
       }
     }
@@ -63,18 +71,15 @@ class _$Thumbnail extends Thumbnail {
   @override
   final String url;
   @override
-  final int width;
+  final int? width;
   @override
-  final int height;
+  final int? height;
 
   factory _$Thumbnail([void Function(ThumbnailBuilder)? updates]) =>
       (new ThumbnailBuilder()..update(updates)).build();
 
-  _$Thumbnail._({required this.url, required this.width, required this.height})
-      : super._() {
+  _$Thumbnail._({required this.url, this.width, this.height}) : super._() {
     BuiltValueNullFieldError.checkNotNull(url, 'Thumbnail', 'url');
-    BuiltValueNullFieldError.checkNotNull(width, 'Thumbnail', 'width');
-    BuiltValueNullFieldError.checkNotNull(height, 'Thumbnail', 'height');
   }
 
   @override
@@ -152,10 +157,8 @@ class ThumbnailBuilder implements Builder<Thumbnail, ThumbnailBuilder> {
     final _$result = _$v ??
         new _$Thumbnail._(
             url: BuiltValueNullFieldError.checkNotNull(url, 'Thumbnail', 'url'),
-            width: BuiltValueNullFieldError.checkNotNull(
-                width, 'Thumbnail', 'width'),
-            height: BuiltValueNullFieldError.checkNotNull(
-                height, 'Thumbnail', 'height'));
+            width: width,
+            height: height);
     replace(_$result);
     return _$result;
   }
