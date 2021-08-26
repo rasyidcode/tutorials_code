@@ -12,7 +12,7 @@ Any tutorials code
 > **Type** : Github Code<br>
 > **Owner** : [dart-lang](https://github.com/dart-lang)<br>
 > **Repo** : [here](https://github.com/rasyidcode/tutorials_code/tree/main/flutter_mockito_examples)<br>
-- [*] [Built Value Tutorial for Dart & Flutter](https://www.youtube.com/watch?v=Jji05a2GV_s)
+- [x] [Built Value Tutorial for Dart & Flutter](https://www.youtube.com/watch?v=Jji05a2GV_s)
 > **Type** : Youtube Video<br>
 > **Channel** : [Reso Coder](https://www.youtube.com/c/ResoCoder)<br>
 > **Tutorial Type** : Single Video<br>
