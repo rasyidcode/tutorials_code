@@ -17,3 +17,8 @@ Any tutorials code
 > **Channel** : [Reso Coder](https://www.youtube.com/c/ResoCoder)<br>
 > **Tutorial Type** : Single Video<br>
 > **Repo** : [here](https://github.com/rasyidcode/tutorials_code/tree/main/flutter_built_value)<br>
+- [x] [Built Value Tutorial for Dart & Flutter](https://www.youtube.com/watch?v=Jji05a2GV_s)
+> **Type** : Youtube Video<br>
+> **Channel** : [Reso Coder](https://www.youtube.com/c/ResoCoder)<br>
+> **Tutorial Type** : Single Video<br>
+> **Repo** : [here](https://github.com/rasyidcode/tutorials_code/tree/main/flutter_built_value)<br>
